@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fade District | Barbershop</title>
+<meta name="description" content="Fade District Barbershop — precision cuts, clean fades, and sharp style.">
+<style>
+:root{--bg:#0b0b0c;--panel:#141416;--text:#f5f5f5;--muted:#a5a5aa;--accent:#d7ff3f;--line:#29292d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;letter-spacing:.08em}.logo span{color:var(--accent)}
+.links{display:flex;gap:28px;color:#d5d5d8;font-size:14px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:8px;background:var(--accent);color:#0a0a0a;font-weight:800;border:0;cursor:pointer}
+.hero{min-height:700px;display:grid;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 25%,#2b2f1a 0,#0b0b0c 36%)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,12,.98),rgba(11,11,12,.62),rgba(11,11,12,.15));pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:680px;padding:100px 0}.eyebrow{color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+h1{font-size:clamp(52px,8vw,94px);line-height:.92;margin:18px 0 24px;letter-spacing:-.055em}h2{font-size:clamp(34px,5vw,54px);line-height:1;margin:0 0 14px;letter-spacing:-.04em}
+.lead{font-size:18px;color:#c1c1c6;max-width:570px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.ghost{padding:12px 20px;border:1px solid #55555a;border-radius:8px;font-weight:700}
+section{padding:90px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}.price{color:var(--accent);font-size:28px;font-weight:900}.card h3{margin:8px 0}.card p{color:var(--muted);margin:5px 0}
+.barbers .card{padding:0;overflow:hidden}.avatar{height:250px;background:linear-gradient(145deg,#29292d,#101012);display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:900;color:#666}.bio{padding:20px}
+.gallery{grid-template-columns:repeat(4,1fr)}.shot{height:220px;border-radius:12px;background:linear-gradient(135deg,#242426,#101011);border:1px solid var(--line);display:flex;align-items:end;padding:18px;font-weight:800}
+.review{font-size:18px}.stars{color:var(--accent);letter-spacing:3px}
+.booking{background:var(--accent);color:#0a0a0a;border-radius:20px;padding:44px}.booking h2{margin-bottom:8px}.booking .btn{background:#0a0a0a;color:white}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:13px;font-weight:800}input,select{padding:14px;border-radius:8px;border:1px solid #c5e936;background:#edffad;font:inherit;color:#111}
+footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:20px}
+.toast{position:fixed;right:20px;bottom:20px;background:#fff;color:#111;padding:15px 18px;border-radius:10px;box-shadow:0 10px 30px #0008;display:none;font-weight:800}
+@media(max-width:760px){.links{display:none}.hero{min-height:620px}.grid,.gallery{grid-template-columns:1fr}.section-head{display:block}form{grid-template-columns:1fr}.field.full{grid-column:auto}.foot{display:block}.foot>*{margin:8px 0}}
+</style>
+</head>
+<body>
+<nav><div class="container navin">
+<a class="logo" href="#">FADE<span>DISTRICT</span></a>
+<div class="links"><a href="#services">Services</a><a href="#barbers">Barbers</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a></div>
+<a class="btn" href="#booking">Book Now</a>
+</div></nav>
+
+<header class="hero"><div class="container hero-content">
+<div class="eyebrow">Precision cuts. Zero excuses.</div>
+<h1>LOOK SHARP.<br>FEEL SHARPER.</h1>
+<p class="lead">A modern neighborhood barbershop built around clean fades, classic cuts, and a chair experience that keeps you coming back.</p>
+<div class="actions"><a class="btn" href="#booking">Book an Appointment</a><a class="ghost" href="#services">View Services</a></div>
+</div></header>
+
+<section id="services"><div class="container">
+<div class="section-head"><div><div class="eyebrow">Services</div><h2>Built for your style.</h2></div><p class="muted">Simple pricing. Premium results.</p></div>
+<div class="grid">
+<div class="card"><div class="price">$35</div><h3>Signature Fade</h3><p>Skin, low, mid, or high fade with a sharp finish.</p></div>
+<div class="card"><div class="price">$30</div><h3>Classic Cut</h3><p>Scissor or clipper cut, styled exactly how you like it.</p></div>
+<div class="card"><div class="price">$45</div><h3>Cut + Beard</h3><p>Full haircut with beard shaping and line-up.</p></div>
+<div class="card"><div class="price">$25</div><h3>Beard Service</h3><p>Trim, shape, line-up, and hot towel finish.</p></div>
+<div class="card"><div class="price">$20</div><h3>Kids Cut</h3><p>Fresh, clean cuts for the next generation.</p></div>
+<div class="card"><div class="price">$55</div><h3>District Deluxe</h3><p>Cut, beard, hot towel, shampoo, and styling.</p></div>
+</div></div></section>
+
+<section id="barbers"><div class="container barbers">
+<div class="section-head"><div><div class="eyebrow">The Team</div><h2>Meet your barbers.</h2></div></div>
+<div class="grid">
+<div class="card"><div class="avatar">J</div><div class="bio"><h3>Jay — Master Barber</h3><p>Fades & modern cuts</p></div></div>
+<div class="card"><div class="avatar">M</div><div class="bio"><h3>Marcus — Barber</h3><p>Classic cuts & beard work</p></div></div>
+<div class="card"><div class="avatar">D</div><div class="bio"><h3>Devin — Barber</h3><p>Kids & textured styles</p></div></div>
+</div></div></section>
+
+<section id="gallery"><div class="container">
+<div class="section-head"><div><div class="eyebrow">The Work</div><h2>Fresh every time.</h2></div></div>
+<div class="grid gallery"><div class="shot">FADE / 01</div><div class="shot">FADE / 02</div><div class="shot">BEARD / 03</div><div class="shot">CUT / 04</div></div>
+</div></section>
+
+<section id="reviews"><div class="container">
+<div class="section-head"><div><div class="eyebrow">Reviews</div><h2>Don't take our word for it.</h2></div></div>
+<div class="grid">
+<div class="card review"><div class="stars">★★★★★</div><p>“Best fade I've had in a long time. The attention to detail is crazy.”</p><strong>— Chris R.</strong></div>
+<div class="card review"><div class="stars">★★★★★</div><p>“Easy booking, great atmosphere, and my barber understood exactly what I wanted.”</p><strong>— Malik T.</strong></div>
+<div class="card review"><div class="stars">★★★★★</div><p>“Finally found a shop I can stick with. Clean work every single time.”</p><strong>— Andre W.</strong></div>
+</div></div></section>
+
+<section id="booking"><div class="container"><div class="booking">
+<div class="eyebrow">Reserve Your Chair</div><h2>Ready for a fresh cut?</h2><p>Pick a service and request your appointment. We'll confirm your time.</p>
+<form onsubmit="book(event)">
+<div class="field"><label>Name</label><input id="name" required placeholder="Your name"></div>
+<div class="field"><label>Phone</label><input id="phone" required placeholder="(555) 555-5555"></div>
+<div class="field"><label>Service</label><select id="service"><option>Signature Fade — $35</option><option>Classic Cut — $30</option><option>Cut + Beard — $45</option><option>Beard Service — $25</option><option>Kids Cut — $20</option><option>District Deluxe — $55</option></select></div>
+<div class="field"><label>Preferred Date</label><input type="date" id="date" required></div>
+<div class="field full"><label>Preferred Time</label><select id="time"><option>10:00 AM</option><option>11:30 AM</option><option>1:00 PM</option><option>2:30 PM</option><option>4:00 PM</option><option>5:30 PM</option></select></div>
+<div class="field full"><button class="btn" type="submit">Request Appointment</button></div>
+</form>
+</div></div></section>
+
+<footer><div class="container foot"><div><strong>FADEDISTRICT</strong><br>123 Main Street · Sunrise, FL</div><div>Mon–Sat · 9 AM–7 PM<br>(555) 123-4567</div><div>Demo website — created for presentation.</div></div></footer>
+<div class="toast" id="toast">Appointment request received! 🎉</div>
+<script>
+function book(e){e.preventDefault();document.getElementById('toast').style.display='block';setTimeout(()=>document.getElementById('toast').style.display='none',3500)}
+</script>
+</body></html>
